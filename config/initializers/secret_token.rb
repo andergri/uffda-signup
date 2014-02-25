@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-UffdaSignup::Application.config.secret_key_base = '438cacea7a65867a744e5a9cebf74d4487a87eafe055bec0da968937b7735fb2693159f83d1ac73c0b7e4282c8cdb46eb892cb9d4c77076ca9cf59b5da7c57d1'
+UffdaSignup::Application.config.secret_key_base = '62d0f87cdf5793324dc8f3c3ad036ac216e3161db03518cb8ae8133e82b6f634afcf9af7a0586431582b3c5eeef9234a4bca3184ca48725861455abbf481b9bc'
