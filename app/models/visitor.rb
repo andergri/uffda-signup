@@ -12,7 +12,8 @@ class Visitor < ActiveRecord::Base
       :double_optin => false,
       :update_existing => true,
       :send_welcome => true,
-      :openssl_verify_mode  => false
+  :enable_starttls_auto => true,
+  :openssl_verify_mode  => 'none'
     })
     Rails.logger.info("Subscribed #{self.email} to MailChimp") if result
   end
