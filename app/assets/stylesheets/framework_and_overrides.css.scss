@@ -221,10 +221,10 @@ body {
     width: 520px;
   }
 }
-@media (min-width: 70px) {
+@media (max-width: 570px) {
   /* Pull out the header and footer */
   img {
-    width: 60%;
+    width: 80%;
   }
   h4 {
    font-size: 13px;
