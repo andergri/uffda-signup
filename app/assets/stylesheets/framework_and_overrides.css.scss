@@ -53,6 +53,16 @@ section {
     width: 100%;
 }
 
+.footerList {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+.footerLink {
+    display: inline-block;
+    padding: 8px;
+}
 //////////////////////
 /*
  * Globals
@@ -111,7 +121,6 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
 }
 
 
@@ -230,7 +239,7 @@ body {
    font-size: 13px;
   }
   h2 {
-   font-size: 18px;
+   font-size: 20px;
    margin-top: 0px;
   }
 }
