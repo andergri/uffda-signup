@@ -34,18 +34,19 @@
 <div class="row">
             <div class="col-md-6">
              <a href="#" target="_blank" onclick="_gaq.push(['_trackEvent', 'holding', 'share', 'facebook']);
-                                                window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(lo$
+						window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog', 'width=626,height=436');
                                                 return false;">
               <%= image_tag("facebook.png", :alt => "Uffda", class: "social pull-right") %>
              </a>
             </div>
             <div class="col-md-6">
+
             <a href="#" target="_blank" onclick="_gaq.push(['_trackEvent', 'holding', 'share', 'twitter']);
-                                                window.open('https://www.twitter.com/share?url='+encodeURIComponent(location.href$
+						window.open('https://www.twitter.com/share?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent('just signed up for the launch of uffda!'),'twitter-share-dialog', 'width=626,height=436');
                                                 return false;">
               <%= image_tag("twitter.png", :alt => "Uffda", class: "social pull-left") %>
             </a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src$
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
           </div>
 
