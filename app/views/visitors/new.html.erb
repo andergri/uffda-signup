@@ -1,6 +1,15 @@
 <% content_for :title do %>Uffda App<% end %>
 <% content_for :description do %>Uffda is a private sharing app. Join our beta.<% end %>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=554210674686951";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -14,15 +23,52 @@
 	     </br>
 	    </br>
             </br>	
-            <h2>Share privately with friends.</h2>
+
+<% if !flash.empty? %>
+
+  <% flash.each do |name, msg| %>
+    <% if msg == "Signedup" %>
+           <h2>Thanks. Want to tell anyone?</h2>
             </br>
 
+<div class="row">
+            <div class="col-md-6">
+             <a href="#" target="_blank" onclick="_gaq.push(['_trackEvent', 'holding', 'share', 'facebook']);
+                                                window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(lo$
+                                                return false;">
+              <%= image_tag("facebook.png", :alt => "Uffda", class: "social pull-right") %>
+             </a>
+            </div>
+            <div class="col-md-6">
+            <a href="#" target="_blank" onclick="_gaq.push(['_trackEvent', 'holding', 'share', 'twitter']);
+                                                window.open('https://www.twitter.com/share?url='+encodeURIComponent(location.href$
+                                                return false;">
+              <%= image_tag("twitter.png", :alt => "Uffda", class: "social pull-left") %>
+            </a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src$
+            </div>
+          </div>
+
+    <% else %>
+      <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      </div>
+    <% end %>
+  <% end %>
+
+<% else %>
+
+	 <h2>Share privately with friends.</h2>
+            </br>
            <%= simple_form_for @visitor do |f| %>
              <%= f.error_notification %>
              <%= f.input :email, label: false, input_html: { class: 'form-control shrink-text' },  :placeholder => 'Your email address...', :type => "email" %>
              <br/>
              <%= f.button :submit, "Get notified when we launch", :class => "submit btn btn-lg btn-default" %>
            <% end %>
+
+<% end %>
 
           </div>
 
