@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/adelevie/parse_resource.git
+  revision: 1902cdb075124457dc33b4321fcb1e51350f363d
+  specs:
+    parse_resource (1.8.0)
+      activemodel
+      activesupport
+      json
+      rest-client
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -81,7 +91,7 @@ GEM
       guard (>= 2.0.0)
     high_voltage (2.1.0)
     hike (1.2.3)
-    httparty (0.13.0)
+    httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     hub (1.12.0)
@@ -122,11 +132,6 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
-    parse_resource (1.8.0)
-      activemodel
-      activesupport
-      json
-      rest-client
     pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
@@ -149,7 +154,7 @@ GEM
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
-    rails_layout (1.0.13)
+    rails_layout (1.0.14)
     rails_serve_static_assets (0.0.2)
     rails_stdout_logging (0.0.3)
     railties (4.0.3)
@@ -172,9 +177,9 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    simple_form (3.0.1)
-      actionpack (>= 4.0.0, < 4.1)
-      activemodel (>= 4.0.0, < 4.1)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -193,6 +198,9 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.3)
     tilt (1.4.1)
+    time_diff (0.3.0)
+      activesupport
+      i18n
     timers (1.1.0)
     treetop (1.4.15)
       polyglot
@@ -229,7 +237,7 @@ DEPENDENCIES
   hub
   jbuilder (~> 1.2)
   jquery-rails
-  parse_resource (~> 1.8.0)
+  parse_resource!
   pg
   quiet_assets
   rails (= 4.0.3)
@@ -242,6 +250,7 @@ DEPENDENCIES
   simple_form
   sqlite3
   thin
+  time_diff
   turbolinks
   uglifier (>= 1.3.0)
   unicorn

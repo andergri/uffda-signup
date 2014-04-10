@@ -17,10 +17,10 @@ gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'binding_of_caller'
-gem "parse_resource", "~> 1.8.0"
+gem 'parse_resource', github: 'adelevie/parse_resource'
+gem 'time_diff'
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'hub', :require=>nil

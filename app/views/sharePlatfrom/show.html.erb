@@ -1,0 +1,57 @@
+<% content_for :title do %>Uffda App<% end %>
+<% content_for :description do %>Uffda is a private sharing app. Join our beta.<% end %>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=554210674686951";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<nav class="navbar navbar-fixed-top show-header">
+  <div class="container" style="width: 100%;">
+    <div class="navbar-header">
+      <%= link_to image_tag("uffda_white_logo.png", :alt => "Uffda"), root_path, class: 'navbar-brand' %>
+      <%= link_to "Open the App >", root_path, class: 'show-header-mobile' %>
+    </div>
+  </div>
+</nav>
+
+<div class="content-container" style="background-color: #f6f5f6; height: 100%;">
+
+          <div class="inner cover">
+          	<div class="show-container">
+          		
+          		<div class="show-image-container">
+          		 	<%= image_tag(@media.mediaImage, :alt => "Uffda", class: "show-image") %>
+          	 	</div>
+          	 	
+          	 	<div class="show-content-container">
+          			<div class="show-content-p">
+          				<%= image_tag(@from.thumbnail, :alt => "Uffda", class: "show-from-image") %>
+          				<div class="show-from-title">shared by <%= @from.username %></div>
+          			</div>
+          			<div class="show-content-p-center">
+          				<div class="show-title"><%= @media.mediaTitle %></div>
+          	 			<div class="show-subtitle"><%= @media.mediaSubtitle %></div>
+             			<div class="show-date"><%= link_to @media.mediaDomain, @media.mediaLink %> | <%= @mediaDate %></div>
+          			</div>
+          	 	</div>
+          	 	
+          	</div>
+         </div>
+          	 	<!--    <h3><%= @shareplatfrom.sharePlatfromTo %></h3> -->
+          	 	<!--	<h3><%= @shareplatfrom.sharePlatfromShortURL %></h3> -->
+          
+        <div class="inner show-footer">
+			<ul class="footerList">
+				<li class="show-footer-message">Shared through</li>
+				<li class="show-footer-logo"><%= image_tag("uffda_color_logo.png",  class: "show-footer-image", :alt => "Uffda") %></li>
+				<a href="/"><li class="show-footer-button">Download App</li></a>
+			</ul>
+        </div>
+	 
+</div>

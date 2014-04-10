@@ -39,7 +39,7 @@
   </head>
   <body>
     <header>
-        <% if current_page?(root_path) %>
+        <% if current_page?(root_path) || current_page?(show_shareplatfrom_path) %>
  	<% else %>
  	<%=  render 'layouts/navigation' %>
 	<% end %>
@@ -47,7 +47,7 @@
        <%#= render 'layouts/messages' %>
        <%= yield %>
     <footer>
- 	<% if current_page?(root_path) %>
+ 	<% if current_page?(root_path) || current_page?(show_shareplatfrom_path) %>
         <% else %>
         <%=  render 'layouts/footer' %>
         <% end %>
