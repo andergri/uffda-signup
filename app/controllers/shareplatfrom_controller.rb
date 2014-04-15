@@ -9,7 +9,7 @@ class ShareplatfromController < ApplicationController
          begin
           @mediaDate = Time.diff(Time.parse(@media.mediaPublished), Time.now, '%y, %d ago')[:diff]
          rescue
-          @mediaDate = Time.diff(Time.at(@media.mediaPublished), Time.now, '%y, %d ago')[:diff]
+          @mediaDate = Time.diff(Time.at(@media.mediaPublished.to_f), Time.now, '%y, %d ago')[:diff]
          ensure 
          end
    end
