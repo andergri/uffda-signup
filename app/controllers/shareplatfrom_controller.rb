@@ -6,6 +6,11 @@ class ShareplatfromController < ApplicationController
          @shareplatfrom = Shareplatfrom.find_by_sharePlatfromShortURL(params[:id])
          @media =  @shareplatfrom.sharePlatfromMedia
          @from =  @shareplatfrom.sharePlatfromFrom
-         @mediaDate = Time.diff(Time.parse(@media.mediaPublished), Time.now, '%y, %d ago')[:diff]
+         begin
+          @mediaDate = Time.diff(Time.parse(@media.mediaPublished), Time.now, '%y, %d ago')[:diff]
+         rescue
+          @mediaDate = Time.diff(Time.at(@media.mediaPublished), Time.now, '%y, %d ago')[:diff]
+         ensure 
+         end
    end
 end
