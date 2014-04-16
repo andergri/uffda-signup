@@ -191,7 +191,7 @@ h3 {
   background-size: cover;
   overflow: hidden;
   background-color: #665bab;
-  background-image: url(asset_path("backgroundOpacityImage.png"));
+  background-image: asset_url("backgroundOpacityImage.png");
   //background-image: url(https://s3.amazonaws.com/ooomf-com-files/7erBZvZMQ2mmuFQ10vcA_IMGP4512.jpg);
 }
 .site-wrapper-inner {
