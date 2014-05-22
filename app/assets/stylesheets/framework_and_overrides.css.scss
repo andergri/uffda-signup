@@ -142,6 +142,45 @@ a:hover {
   border: 1px solid #fff;
 }
 
+.contact-list {
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-list .icon-link{
+  padding-left: 2.57143em;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 24px 24px;
+}
+.nav-item{
+  padding: 5px;
+  font-size: 18px;
+}
+.nav-link{
+  color: #968CD1;
+  text-shadow: none;
+  text-decoration: none;
+}
+.nav-link:hover{
+  color: #B8B0E7;
+  text-shadow: none;
+  text-decoration: none;
+}
+.facebook-link{
+    background-image: url("/assets/icon-facebook.png");
+}
+.twitter-link{
+    background-image: url("/assets/icon-twitter.png");
+}
+.email-link{
+    background-image: url("/assets/icon-mail.png");
+}
+.download-link{
+    background-image: url("/assets/icon-download.png"); 
+}
+
 
 /*
  * Base structure
