@@ -169,16 +169,16 @@ a:hover {
   text-decoration: none;
 }
 .facebook-link{
-    background-image: url("/assets/icon-facebook.png");
+    background-image: asset_url("icon-facebook.png");
 }
 .twitter-link{
-    background-image: url("/assets/icon-twitter.png");
+    background-image: asset_url("icon-twitter.png");
 }
 .email-link{
-    background-image: url("/assets/icon-mail.png");
+    background-image: asset_url("icon-mail.png");
 }
 .download-link{
-    background-image: url("/assets/icon-download.png"); 
+    background-image: asset_url("icon-download.png"); 
 }
 
 
