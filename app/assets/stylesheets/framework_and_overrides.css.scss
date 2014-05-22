@@ -47,6 +47,10 @@ text-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
 .section {
   text-align: left;
   }
+  
+ .section:last-child  {
+  padding-bottom:60px;
+ } 
 
 .navbar {
   @extend .navbar;
@@ -59,8 +63,8 @@ text-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
 }
 .navbar-inverse {
   @extend .navbar-inverse;
-  background-color: #F5F5F5;
-  border-color: #5C529B;
+  background-color: #FAFAFA;
+  border-top: 1px solid #F8F8F8;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #A7A7A7;
@@ -94,7 +98,6 @@ a:hover {
     padding: 8px;
 }
 .content {
-  margin-top: 52px;
   padding-top: 40px;
 }
 
@@ -111,6 +114,11 @@ a:hover {
   width:90px;
 }
 
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
+}
 
 //////////////////////
 /*
@@ -144,7 +152,6 @@ body {
   height: 100%;
 }
 body {
-  color: #474747;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.05);
   box-shadow: inset 0 0 100px rgba(0,0,0,.05);
@@ -157,6 +164,7 @@ p {
   font-style: normal;
   font-size: 17px;
   line-height: 1.5;
+  word-spacing: 0.1rem;
 }
 section:first-child{
   margin-top: 50px;
@@ -169,18 +177,26 @@ section:first-child{
    word-spacing: 3px;
    font-size: 44px;
 }
-
+h1 {
+  color: #494949;
+  margin-top: 40px;  
+}
 h2 {
   font-weight: 400;
   font-family: 'Lato', sans-serif;
   letter-spacing: 0.2px;
   word-spacing: 3px;
+  color: #665bab;
+  margin-top: 50px;
 }
-
+h2 .first { margin-top: 0 !important;  }
 h3 {
   margin-top: 50px;
 }
-
+ul{ 
+  list-style-type: none;
+  
+}
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   color: #fff;
@@ -191,7 +207,7 @@ h3 {
   background-size: cover;
   overflow: hidden;
   background-color: #665bab;
-  background-image: asset_url("backgroundOpacityImage.png");
+  background-image: asset_url("backgroundImage.png");
   //background-image: url(https://s3.amazonaws.com/ooomf-com-files/7erBZvZMQ2mmuFQ10vcA_IMGP4512.jpg);
 }
 .site-wrapper-inner {
@@ -255,6 +271,9 @@ h3 {
 .masthead-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
+}
+.navbar-nav {
+  float: right;
 }
 
 @media (min-width: 768px) {
@@ -330,7 +349,7 @@ h3 {
 @media (max-width: 570px) {
   /* Pull out the header and footer */
    .shrink-text {
-    width: 275px;
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
   }
