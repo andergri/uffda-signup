@@ -25,9 +25,11 @@
           <div class="inner cover">
           	<div class="show-container">
           		
+          		<%= link_to(@media.mediaLink) do %>
           		<div class="show-image-container">
-          		 	<%= image_tag(@media.mediaImage, :alt => "Uffda", class: "show-image") %>
+          			<div class="show-image" style="background-image: url(<%= @media.mediaImage %>)"  ></div>
           	 	</div>
+          	 	<% end %>
           	 	
           	 	<div class="show-content-container">
           			<div class="show-content-p">
