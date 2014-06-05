@@ -18,10 +18,13 @@
 
           <div class="inner cover">
            
-            <h1 class="cover-heading"><div class="logo_border"><%= image_tag("Uffda_full_logo_u.png", :alt => "Uffda", :style => "width: 95px;" ) %></div></h1>
-            </br>
-	    	</br>
-            <div class="logo-header">Uffda</div>
+            <h1 class="cover-heading">
+            	<div style="margin-left: auto; margin-right: auto; width: 354px; height: 130px;">
+            	<div class="logo_border"><%= image_tag("Uffda_full_logo_u.png", :alt => "Uffda", :style => "width: 75px;" ) %></div><%= image_tag("uffda_half_white_logo.png", :alt => "Uffda", :style => "width: 220px; float: left;margin-top: 9px; margin-left: 9px;" ) %>
+            	</div>
+            </h1>
+
+          <!--  <div class="logo-header">Uffda</div> -->
           <!--  <h4 class="pull-right">( OOF - dah )</h4> -->
 
 <% if !flash.empty? %>
@@ -59,16 +62,42 @@
   <% end %>
 
 <% else %>
-
-	 <h2 style="color:#FFFFFF;">Share privately with friends.</h2>
+<br/>
+	 <h2 style="color: #F9F7FF;">Share privately with friends.</h2>
+	           </br>
+				 </br>
+	 		<p class="appIcons">
+	 		 <a href="#" onclick="_gaq.push(['_trackEvent', 'holding', 'open', 'apple app store']);
+						window.open('https://itunes.apple.com/us/app/uffda-private-sharing/id880863676?mt=8&uo=4'); return false;">
+              	<%= image_tag("AppStore@2x.png", :alt => "Apple App Store", class: "appIcon pull-left") %>
+             </a>
+	 
+	          <a href="#" id="install-button" onclick="_gaq.push(['_trackEvent', 'holding', 'open', 'chrome web store']);
+						chrome.webstore.install();">
+              <%= image_tag("ChromeWebStore@2x.png", :alt => "Chrome Web Store", class: "appIcon pull-right") %>
+             </a>
+	 		</p>
+	 		<br/>
+	 		<br/>
+	 		
+		 		<div class="play-button">
+		 		<!--	<a href="#" target="_blank" onclick="_gaq.push(['_trackEvent', 'holding', 'open', 'video']);
+						window.open(''); return false;">
+		 				<div class="play-button-icon">&#9658;</div>
+		 				<div class="play-button-text">Watch <span class="play-button-text-span"> #IntroducingUffda</span></div>
+		 			</a>
+		 		-->
+		 		</div> 
             </br>
+            
+           <!--
            <%= simple_form_for @visitor do |f| %>
              <%= f.error_notification %>
              <%= f.input :email, label: false, input_html: { class: 'form-control shrink-text' },  :placeholder => 'Your email address...', :type => "email" %>
              <br/>
              <%= f.button :submit, "Get notified when we launch", :class => "submit btn btn-lg btn-default" %>
            <% end %>
-
+			-->
 <% end %>
 
           </div>
