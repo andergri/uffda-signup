@@ -81,13 +81,15 @@
 	 		<br/>
 	 		
 		 		<div class="play-button">
-		 		<!--	<a href="#" target="_blank" onclick="_gaq.push(['_trackEvent', 'holding', 'open', 'video']);
-						window.open(''); return false;">
+		 			<a href="#" onclick="_gaq.push(['_trackEvent', 'holding', 'open', 'video']);
+						$('.play-overlay').toggle(); return false;">
+				
 		 				<div class="play-button-icon">&#9658;</div>
 		 				<div class="play-button-text">Watch <span class="play-button-text-span"> #IntroducingUffda</span></div>
 		 			</a>
-		 		-->
+		 		
 		 		</div> 
+		 		
             </br>
             
            <!--
@@ -120,6 +122,14 @@
 
        </div>
 
+		<div class="play-overlay" onclick="$('.play-overlay').toggle();">
+			<div class="play-exit">&#x2716;</div>
+			<div class="play-overlay-container">	
+				<iframe src="//player.vimeo.com/video/97485274"  width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>	
+			</div>
+		</div>
+
      </div>
+
 
 </div>
