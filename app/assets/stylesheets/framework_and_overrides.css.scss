@@ -540,6 +540,8 @@ ul{
   font-size: 16px;
   text-align: left;
   margin-bottom: 5px;
+  max-height: 108px;
+  overflow: hidden;
 }
 .show-date{
   color: #999;
@@ -638,5 +640,15 @@ ul{
     margin-left: 60px;
     margin-bottom: 12px;
     font-style: italic;
+  }
+  .play-button-text {
+    font-size: 21px;
+  }
+  .play-button-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    font-size: 20px;
+    line-height: 28px;
   }
 }
